@@ -1,6 +1,5 @@
-const Selector = require('emjr').default
-
 exports.decorateTerm = (Term, { React }) => {
+  const Selector = require('emjr').default
   class HyperEmoji extends React.Component {
     constructor(props, context) {
       super(props, context)
