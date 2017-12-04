@@ -1,0 +1,16 @@
+{
+  "name": "hyper-emoji",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Extension for Hyper.app to input emojis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albinekb/hyper-emoji.git",
+    "keywords": ["hyper", "hyper.app", "hyperterm", "shell", "emoji"],
+    "author": "albinekb"
+  },
+  "dependencies": {
+    "emjr": "^1.0.3"
+  }
+}
