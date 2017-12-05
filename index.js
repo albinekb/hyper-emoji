@@ -103,7 +103,7 @@ exports.decorateMenu = menu => {
     newMenuItem.submenu.push({
       label: 'Toggle emoji picker',
 
-      accelerator: 'ctrl+option+space',
+      accelerator: 'ctrl+command+space',
 
       click: (item, focusedWindow) => {
         toggleEmojiPicker(focusedWindow)

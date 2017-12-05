@@ -4,7 +4,7 @@
 
 ## Usage
 
-Press control+option+space or select from the menubar View->Toggle emoji picker to open.
+Press control+command+space or select from the menubar View->Toggle emoji picker to open.
 
 ![](https://raw.githubusercontent.com/albinekb/hyper-emoji/master/media/picker.png)
 
