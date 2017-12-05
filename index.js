@@ -50,6 +50,7 @@ exports.decorateTerm = (Term, { React }) => {
                 onClick: emoji => {
                   this.setState({ open: false })
                   const data = emoji.char + ' ' // TODO: add option for this
+                  console.log('data', data)
                   const escaped = false
                   const uid = null
                   window.store.dispatch((dispatch, getState) => {
@@ -60,7 +61,8 @@ exports.decorateTerm = (Term, { React }) => {
                         // If no uid is passed, data is sent to the active session.
                         const targetUid = uid || getState().sessions.activeUid
                         dispatch({ type: 'SET_ACTIVE', uid: targetUid })
-                        document.querySelector('textarea').focus()
+                        const textArea = document.querySelector('textarea')
+                        if (textArea && textArea) textArea.focus()
                         window.rpc.emit('data', {
                           uid: targetUid,
                           data,
