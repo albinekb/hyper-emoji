@@ -41,40 +41,36 @@ exports.decorateTerm = (Term, { React }) => {
                 zIndex: 10,
               },
             },
-            React.createElement(
-              Selector,
-              {
-                autoFocus: true,
-                set: 'apple',
-                native: false, // maybe?
-                onClick: emoji => {
-                  this.setState({ open: false })
-                  const data = emoji.char + ' ' // TODO: add option for this
-                  console.log('data', data)
-                  const escaped = false
-                  const uid = null
-                  window.store.dispatch((dispatch, getState) => {
-                    dispatch({
-                      type: 'SESSION_USER_DATA',
-                      data,
-                      effect() {
-                        // If no uid is passed, data is sent to the active session.
-                        const targetUid = uid || getState().sessions.activeUid
-                        dispatch({ type: 'SET_ACTIVE', uid: targetUid })
-                        const textArea = document.querySelector('textarea')
-                        if (textArea && textArea) textArea.focus()
-                        window.rpc.emit('data', {
-                          uid: targetUid,
-                          data,
-                          escaped: false,
-                        })
-                      },
-                    })
+            React.createElement(Selector, {
+              autoFocus: true,
+              set: 'apple',
+              native: false, // maybe?
+              onClick: emoji => {
+                this.setState({ open: false })
+                const data = emoji.char + ' ' // TODO: add option for this
+
+                const escaped = false
+                const uid = null
+                window.store.dispatch((dispatch, getState) => {
+                  dispatch({
+                    type: 'SESSION_USER_DATA',
+                    data,
+                    effect() {
+                      // If no uid is passed, data is sent to the active session.
+                      const targetUid = uid || getState().sessions.activeUid
+                      dispatch({ type: 'SET_ACTIVE', uid: targetUid })
+                      const textArea = document.querySelector('textarea')
+                      if (textArea && textArea) textArea.focus()
+                      window.rpc.emit('data', {
+                        uid: targetUid,
+                        data,
+                        escaped: false,
+                      })
+                    },
                   })
-                },
+                })
               },
-              'hello',
-            ),
+            }),
           ),
         React.createElement(Term, this.props),
       )
@@ -105,7 +101,7 @@ exports.decorateMenu = menu => {
     newMenuItem.submenu.push({
       label: 'Toggle emoji picker',
 
-      accelerator: 'ctrl+command+space',
+      accelerator: 'ctrl+alt+space',
 
       click: (item, focusedWindow) => {
         toggleEmojiPicker(focusedWindow)

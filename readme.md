@@ -4,11 +4,12 @@
 
 ## Usage
 
-Press control+command+space or select from the menubar View->Toggle emoji picker to open.
+Press control+alt+space or select from the menubar View->Toggle emoji picker to
+open.
 
 ![](https://raw.githubusercontent.com/albinekb/hyper-emoji/master/media/picker.png)
 
-## 🚨 *TODO* Configuration 
+## 🚨 _TODO_ Configuration
 
 In your `~/.hyper.js`, you can configure settings for `hyper-emoji`.
 
@@ -21,7 +22,7 @@ modules.exports = {
     },
   },
   // ...
-};
+}
 ```
 
 ### addSpace
