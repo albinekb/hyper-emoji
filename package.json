@@ -1,6 +1,6 @@
 {
   "name": "hyper-emoji",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "description": "Extension for Hyper.app to input emojis",
   "license": "MIT",
