@@ -3,8 +3,9 @@
 
 
 emjr@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/emjr/-/emjr-1.0.3.tgz#20f7a9c54db9d93d7eeed5ed8afb53543ec120c9"
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/emjr/-/emjr-1.0.4.tgz#a1331b26e43a8233874fd766f3f3595a1d705282"
+  integrity sha512-kx1wp5iuA13dkHntgFPEhOByyl5mzdDX1bOBc+Qod7K0hnCrX8OME6q+olBdAcEzVu1YNtWliZWUJJxlMCpM7g==
 
 js-tokens@^3.0.0:
   version "3.0.2"
