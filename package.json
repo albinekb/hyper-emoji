@@ -19,6 +19,6 @@
   "dependencies": {
     "emjr": "^1.0.3",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^19.0.0"
   }
 }
